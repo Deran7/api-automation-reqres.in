@@ -3,19 +3,9 @@ export const VALID_REGISTER_WITH_EMAIL_AND_PASSWORD_REGISTED = {
     "password": "pistol"
 }
 
-export const INVALID_REGISTER_WITH_EMAIL_REGISTED_AND_PASSWORD_NOT_REGISTED = {
-    "email": "eve.holt@reqres.in",
-    "password": "pistol123"
-}
-
 export const INVALID_REGISTER_WITH_EMAIL_NOT_REGISTED_AND_PASSWORD_REGISTED = {
     "email": "ovo.holt@reqres.in",
     "password": "pistol"
-}
-
-export const INVALID_REGISTER_WITH_EMAIL_AND_PASSWORD_NOT_REGISTED = {
-    "email": "ovo.holt@reqres.in",
-    "password": "pistol123"
 }
 
 export const INVALID_REGISTER_WITH_EMAIL_REGISTED_AND_PASSWORD_EMPTY = {

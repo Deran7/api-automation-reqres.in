@@ -1,11 +1,10 @@
 import BaseAPI from "$pages/base.api.js";
-import AuthorizedAPI from "$pages/authorized.base.api.js"
 
 const bookingApi = {
     create: (data) => BaseAPI.post ('/users', data),
-    update: (id, payload) => AuthorizedAPI.put(`/users/${id}`, payload),
-    partialUpdate: (id, payload) => AuthorizedAPI.patch(`/users/${id}`, payload),
-    delayedResponse: (id) => BaseAPI.get (`/users?delay=/${id}`)
+    update: (id, payload) => BaseAPI.put(`/users/${id}`, payload),
+    partialUpdate: (id, payload) => BaseAPI.patch(`/users/${id}`, payload),
+    deleteBooking : (id) => BaseAPI.delete(`/booking/${id}`)
 }
 
 export default bookingApi;

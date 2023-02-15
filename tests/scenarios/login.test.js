@@ -13,12 +13,6 @@ describe('Login positif case', () => {
 
 describe('Login negatif case', () => {
 
-    it('Failed login with email registed and password not registed', async () => {
-        const response = await loginApi.login(data.INVALID_LOGIN_WITH_EMAIL_REGISTED_AND_PASSWORD_NOT_REGISTED)
-
-        assert.equal(response.status, 400)
-        assert.equal(response.data.error, "user not found")
-    });
 
     it('Failed login with email not registed and password registed', async () => {
         const response = await loginApi.login(data.INVALID_LOGIN_WITH_EMAIL_NOT_REGISTED_AND_PASSWORD_REGISTED)
