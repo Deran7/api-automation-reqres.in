@@ -9,7 +9,7 @@ chai.use(jsonSchema);
 
 describe('Delayed response',() => {
 
-    it('Should succesfuly get list users resource', async () => {
+    it('Should succesfuly delayed response', async () => {
         const param = getParams(data.VALID_DELAYED_RESPONSE_PARAM['delay']);
         const response = await usersApi.list_resource(param);
 

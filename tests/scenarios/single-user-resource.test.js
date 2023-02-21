@@ -7,7 +7,7 @@ import * as schema from '$root/schema/list-users-resource.schema.js';
 
 chai.use(jsonSchema);
 
-describe('Single user resource',() => {
+describe('Single users resource',() => {
 
     it('Should succesfuly get single users resource', async () => {
         const param = getParams(data.VALID_SINGLE_USERS_RESOURCE_PARAM['unknown']);

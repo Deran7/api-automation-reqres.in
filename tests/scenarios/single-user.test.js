@@ -7,13 +7,21 @@ import * as schema from '$root/schema/single-users.schema.js';
 
 chai.use(jsonSchema);
 
-describe('Single users',() => {
+describe('Single users Positif Case',() => {
 
     it('Should succesfuly get single users', async () => {
-        const param = getParams(data.VALID_SINGLE_USERS_PARAM['users']);
-        const response = await usersApi.single_users(param);
-
+        const response = await usersApi.single_users(2);
+        
         assert.equal(response.status, 200);
         expect(response.data).to.be.jsonSchema(schema.VALID_SINGLE_USERS_RESPONSE_SCHEMA);
     });
-});
+})
+
+describe('Single Users Negatif Case', () => {
+
+    it('Failed get single users', async () => {
+        const response = await usersApi.singleusers_invalid(23)
+
+        assert.equal(response.status, 200)
+    });
+})
